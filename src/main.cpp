@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
         lst = cur;
         lstApp = curApp;
     });
-//    std::cout<<"dbus bamf"<<dbus.connect("org.ayatana.bamf","/org/ayatana/bamf/matcher","org.ayatana.bamf.matcher","ActiveWindowChanged",&monitor,SLOT(activeWindowChange(QString,QString)))<<std::endl;
+//    std::cout<<"dbus bamf"<<dbus.connect("com.yoyo.DigitalWellbeing","/matcher","com.yoyo.DigitalWellbeing.matcher","ActiveWindowChanged",&monitor,SLOT(activeWindowChange(QString,QString)))<<std::endl;
 #ifndef RELEASE
     std::cout<<"running"<<std::endl;
 #endif

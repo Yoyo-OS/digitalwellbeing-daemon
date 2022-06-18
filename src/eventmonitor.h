@@ -59,7 +59,7 @@ private slots:
 class EventMonitor : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.deepin.dde.digitalWellbeing")
+    Q_CLASSINFO("D-Bus Interface", "org.yoyo.DigitalWellbeing")
 public:
     explicit EventMonitor(QObject *parent = nullptr);
     ~EventMonitor();

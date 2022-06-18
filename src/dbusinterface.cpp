@@ -5,8 +5,8 @@
 
 DBusInterface::DBusInterface(Logger& l):logger(l)
 {
-    QDBusConnection::sessionBus().registerService("org.deepin.dde.digitalWellbeing");
-    std::cerr<<"register"<<QDBusConnection::sessionBus().registerObject("/org/deepin/dde/digitalWellbeing","org.deepin.dde.digitalWellbeing",this,QDBusConnection::ExportAllSlots|QDBusConnection::ExportAllSignals)<<std::endl;
+    QDBusConnection::sessionBus().registerService("com.yoyo.DigitalWellbeing");
+    std::cerr<<"register"<<QDBusConnection::sessionBus().registerObject("/DigitalWellbeing","com.yoyo.DigitalWellbeing",this,QDBusConnection::ExportAllSlots|QDBusConnection::ExportAllSignals)<<std::endl;
 }
 QString DBusInterface::getDailyStatJson(){
     qWarning()<<"DBusInterface::getDailyStatJson";
