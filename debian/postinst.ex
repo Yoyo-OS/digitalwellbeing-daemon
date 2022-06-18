@@ -1,5 +1,5 @@
 #!/bin/sh
-# postinst script for digitalwellbeing-daemon
+# postinst script for yoyo-digitalwellbeing-daemon
 #
 # see: dh_installdeb(1)
 

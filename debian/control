@@ -1,14 +1,14 @@
-Source: digitalwellbeing-daemon
+Source: yoyo-digitalwellbeing-daemon
 Section: utils
 Priority: optional
-Maintainer: Yicheng Zhong <zhong200234@outlook.com>
+Maintainer: Yoyo OS <admin@yzzi.icu>
 Build-Depends: debhelper (>= 11), libdtkcore-dev, libqt5dbus5, libqt5sql5
 Standards-Version: 4.1.3
-Homepage: https://github.com/ZhongYic00/digitalwellbeing-daemon
-Vcs-Browser: https://github.com/zhongyic00/digitalwellbeing-daemon
-Vcs-Git: https://github.com/zhongyic00/digitalwellbeing-daemon.git
+Homepage: https://github.com/yoyo-os/digitalwellbeing-daemon
+Vcs-Browser: https://github.com/yoyo-os/digitalwellbeing-daemon
+Vcs-Git: https://github.com/yoyo-os/digitalwellbeing-daemon.git
 
-Package: digitalwellbeing-daemon
+Package: yoyo-digitalwellbeing-daemon
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: A digital-wellbeing daemon which monitors your behavior and provides corresponding stats via dbus.

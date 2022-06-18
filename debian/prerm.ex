@@ -1,5 +1,5 @@
 #!/bin/sh
-# prerm script for digitalwellbeing-daemon
+# prerm script for yoyo-digitalwellbeing-daemon
 #
 # see: dh_installdeb(1)
 

@@ -64,7 +64,7 @@ QJsonArray Logger::readPerAppDailyStatJson(){
         obj["icon"]=appinfo.icon();
         obj["time"]=executor.value(1).toInt();
         obj["freq"]=executor.value(2).toInt();
-        if(id!="dde-lock")
+        if(id!="dde-lock" and id!="")
             rt.append(obj);
     }
     return rt;

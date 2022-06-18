@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(digitalwellbeing-daemon VERSION 0.1 LANGUAGES CXX)
+project(yoyo-digitalwellbeing-daemon VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -38,17 +38,17 @@ file(GLOB PROJECT_SOURCES
 
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(digitalwellbeing-daemon
+    qt_add_executable(yoyo-digitalwellbeing-daemon
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
     )
 else()
     if(ANDROID)
-        add_library(digitalwellbeing-daemon SHARED
+        add_library(yoyo-digitalwellbeing-daemon SHARED
             ${PROJECT_SOURCES}
         )
     else()
-        add_executable(digitalwellbeing-daemon
+        add_executable(yoyo-digitalwellbeing-daemon
           ${PROJECT_SOURCES}
         )
     endif()
@@ -56,12 +56,12 @@ endif()
 
 message(${QT_VERSION_MAJOR})
 
-target_compile_definitions(digitalwellbeing-daemon
+target_compile_definitions(yoyo-digitalwellbeing-daemon
   PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
-target_link_libraries(digitalwellbeing-daemon
+target_link_libraries(yoyo-digitalwellbeing-daemon
   PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::DBus Qt${QT_VERSION_MAJOR}::Sql)
 
-set_target_properties(digitalwellbeing-daemon PROPERTIES
+set_target_properties(yoyo-digitalwellbeing-daemon PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -70,9 +70,9 @@ set_target_properties(digitalwellbeing-daemon PROPERTIES
 set(CMAKE_INSTALL_PREFIX "/usr")
 install(FILES src/dbusservices/org.deepin.dde.digitalWellbeing.service
         DESTINATION /usr/share/dbus-1/services)
-install(TARGETS digitalwellbeing-daemon DESTINATION bin)
+install(TARGETS yoyo-digitalwellbeing-daemon DESTINATION bin)
 
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_import_qml_plugins(digitalwellbeing-daemon)
-    qt_finalize_executable(digitalwellbeing-daemon)
+    qt_import_qml_plugins(yoyo-digitalwellbeing-daemon)
+    qt_finalize_executable(yoyo-digitalwellbeing-daemon)
 endif()

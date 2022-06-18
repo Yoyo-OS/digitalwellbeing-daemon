@@ -1,6 +1,5 @@
 #include "appinfo.h"
 #include "dbushelper.h"
-
 AppInfo::AppInfo(QString id):m_id(id){
     getAppInfoFromLauncher();
 }
